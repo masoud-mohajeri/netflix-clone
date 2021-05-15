@@ -1,17 +1,97 @@
-<ion-header [translucent]="true">
+<ion-header #header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <img class="logo" src="../../assets/mockdata/logo.png" alt="logo" />
+
+    <ion-row class="ion-justify-content-center ion-text-center">
+      <ion-col size="4" class="ion-text-right"> TV Shows </ion-col>
+      <ion-col size="4"> Movies </ion-col>
+      <ion-col
+        tappable
+        (click)="openCategories()"
+        class="ion-text-left"
+        size="4"
+      >
+        Categories <ion-icon name="caret-down-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content scrollEvents="true" [appHideHeader]="header" [fullscreen]="true">
+  <div
+    class="spotlight"
+    [style.background-image]="'url(../../../../assets/mockdata/'+spotlight.id+'-cover.jpg)'"
+  >
+    <div class="gradient"></div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <div class="info">
+      <img
+        class="title"
+        [src]="'../../assets/mockdata/'+spotlight.id+'-title.png'"
+        alt=""
+      />
+      <div class="rating">{{spotlight.rating}}</div>
+
+      <ion-row class="ion-align-items-center">
+        <ion-col size="4" class="ion-text-center">
+          <div class="btn-vertical">
+            <ion-icon name="add"></ion-icon>
+            <span>My List</span>
+          </div>
+        </ion-col>
+        <ion-col size="4" class="ion-text-center">
+          <div class="btn-play">
+            <ion-icon name="play" color="dark"></ion-icon>
+            <span>Play</span>
+          </div>
+        </ion-col>
+        <ion-col size="4" class="ion-text-center">
+          <div class="btn-vertical">
+            <ion-icon name="information-circle-outline"></ion-icon>
+            <span>Info</span>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+  <div *ngFor="let section of sections" class="ion-padding">
+    <span class="section-title"> {{section.title}} </span>
+    <ion-slides [options]="ops">
+      <ion-slide *ngFor="let series of section.series">
+        <img
+          *ngIf="section.type !== 'continue'"
+          [src]="'../../assets/mockdata/'+section.type+'-'+series.id+'.jpg'"
+        />
+        <div class="continue" *ngIf="section.type === 'continue'">
+          <img
+            [src]="'../../assets/mockdata/'+section.type+'-'+series.id+'.jpg'"
+          />
+
+          <div class="progress-bar">
+            <div class="progress" [style.width]="series.progress+'%'"></div>
+          </div>
+          <ion-row class="no-padding">
+            <ion-col size="6" class="ion-text-left ion-no-padding">
+              <ion-button fill="clear" size="small" color="medium">
+                <ion-icon
+                  slot="icon-only"
+                  name="information-circle-outline"
+                ></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="6" class="ion-text-left ion-no-padding">
+              <ion-button
+                (click)="opnenInfo(series.title)"
+                fill="clear"
+                size="small"
+                color="medium"
+              >
+                <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
 </ion-content>
