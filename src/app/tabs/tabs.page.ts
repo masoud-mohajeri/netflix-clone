@@ -1,7 +1,6 @@
 import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { IonTabs } from '@ionic/angular';
 import { DrawerComponent } from '../components/drawer/drawer.component';
-import { DrawerService } from '../services/drawer.service';
 
 @Component({
   selector: 'app-tabs',
@@ -15,20 +14,10 @@ export class TabsPage {
   backDropVisible = false;
 
   selected = '';
-  constructor(
-    private drawerService: DrawerService,
-    private changeDetector: ChangeDetectorRef
-  ) {
-    // drawerService.drawerOpen.subscribe((drawerData) => {
-    //   if (drawerData && drawerData.title) {
-    //     this.drawer.openDrawer(drawerData.title);
-    //   }
-    // });
-  }
+  constructor(private changeDetector: ChangeDetectorRef) {}
 
   setSelectedTab() {
     this.selected = this.tabs.getSelected();
-    console.log(this.selected);
   }
 
   closeDrawer() {
@@ -36,7 +25,6 @@ export class TabsPage {
   }
 
   toggleBackDrop(event) {
-    // console.log(event);
     this.backDropVisible = event;
     this.changeDetector.detectChanges();
   }
