@@ -1,17 +1,24 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+<ion-header color="dark">
+  <ion-toolbar color="dark">
+    <ion-title> Search </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-searchbar
+    color="light"
+    placeholder="Search in Netflix series"
+    [debounce]="250"
+  ></ion-searchbar>
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>Recent seaches</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let film of films.images">
+      <ion-avatar style="margin-right: 10px">
+        <img [src]="'../../assets/images/films/'+film" />
+      </ion-avatar>
+      <ion-label>{{film| filmToTitlePipe | uppercase}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

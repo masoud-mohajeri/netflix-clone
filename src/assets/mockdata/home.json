@@ -1,13 +1,13 @@
 {
   "spotlight": {
-    "id": 2,
+    "id": 1,
     "name": "Firefly",
     "rating": "#5 in Germany Today",
     "desc": "One found fame and fortune. The other love and family. Lifelong best friends who are as different as can be — and devoted as it gets."
   },
   "sections": [
     {
-      "title": "Continue Watching for Simon",
+      "title": "Continue Watching for You",
       "type": "continue",
       "series": [
         {

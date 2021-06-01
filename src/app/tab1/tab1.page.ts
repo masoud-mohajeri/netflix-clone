@@ -16,7 +16,8 @@ export class Tab1Page {
   ops = {
     slidesPerView: 2.4,
     spaceBetween: 10,
-    freeMode: true,
+    // freeMode: true,
+    loop: true,
   };
   constructor(
     private modalControler: ModalController,

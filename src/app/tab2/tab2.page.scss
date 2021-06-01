@@ -1,0 +1,21 @@
+ion-slide {
+  img {
+    border-radius: 6px;
+  }
+}
+ion-toolbar {
+  --background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8715861344537815) 0%,
+    rgba(0, 0, 0, 0.8463760504201681) 57%,
+    rgba(0, 0, 0, 0.6923144257703081) 80%,
+    rgba(0, 0, 0, 0.5438550420168067) 89%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+:host {
+  ion-toolbar {
+    border: 0;
+    margin-top: -1px;
+  }
+}
