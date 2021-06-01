@@ -11,8 +11,8 @@ import { DrawerService } from '../services/drawer.service';
   styleUrls: ['tab1.page.scss'],
 })
 export class Tab1Page {
-  sections = homeData.sections;
-  spotlight = homeData.spotlight;
+  sections: any = homeData.sections;
+  spotlight: any = homeData.spotlight;
   ops = {
     slidesPerView: 2.4,
     spaceBetween: 10,

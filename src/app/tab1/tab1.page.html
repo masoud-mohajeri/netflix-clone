@@ -58,7 +58,7 @@
   <div *ngFor="let section of sections" class="ion-padding">
     <span class="section-title"> {{section.title}} </span>
     <ion-slides [options]="ops">
-      <ion-slide *ngFor="let series of section.series">
+      <ion-slide *ngFor="let series of section.series  ">
         <img
           *ngIf="section.type !== 'continue'"
           [src]="'../../assets/mockdata/'+section.type+'-'+series.id+'.jpg'"
@@ -81,6 +81,8 @@
               </ion-button>
             </ion-col>
             <ion-col size="6" class="ion-text-left ion-no-padding">
+              <ng-container *ngIf="series.title"></ng-container>
+
               <ion-button
                 (click)="opnenInfo(series.title)"
                 fill="clear"
