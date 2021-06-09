@@ -54,3 +54,7 @@ ion-tab-bar.my-custom-tab-bar {
 ion-tab-button[aria-selected="true"] {
   color: white;
 }
+
+ion-tab-bar {
+  transform: translateY(1px);
+}
