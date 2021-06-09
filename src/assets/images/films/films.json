@@ -1,0 +1,46 @@
+{
+  "films": [
+    {
+      "header": "Trending Now",
+      "images": [
+        "oxygen.jpg",
+        "army-and-dead.jpg",
+        "bad-trip.jpg",
+        "deviltime.jpg",
+        "the-woman-in-the-window.jpg"
+      ]
+    },
+    {
+      "header": "Popular on Netflix",
+      "images": [
+        "deviltime.jpg",
+        "the-woman-in-the-window.jpg",
+        "synchronic.jpg",
+        "monster-problems.jpg",
+        "midnight-sky.jpg"
+      ]
+    },
+    {
+      "header": "Netflix Orginal",
+      "images": [
+        "oxygen.jpg",
+        "army-and-dead.jpg",
+        "bad-trip.jpg",
+        "deviltime.jpg",
+        "the-woman-in-the-window.jpg",
+        "synchronic.jpg"
+      ]
+    },
+    {
+      "header": "Hot Series",
+      "images": [
+        "the-woman-in-the-window.jpg",
+        "synchronic.jpg",
+        "monster-problems.jpg",
+        "oxygen.jpg",
+        "army-and-dead.jpg",
+        "bad-trip.jpg"
+      ]
+    }
+  ]
+}

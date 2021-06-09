@@ -1,0 +1,28 @@
+{
+  "actors": [
+    {
+      "name": "Chris Hemsworth",
+      "image": "act1.jpg"
+    },
+    {
+      "name": "Chris Evans",
+      "image": "act2.jpg"
+    },
+    {
+      "name": "Tom Holland",
+      "image": "act3.jpg"
+    },
+    {
+      "name": "Mark Ruffalo",
+      "image": "act4.jpg"
+    },
+    {
+      "name": "Robert Downey Sr.",
+      "image": "act5.jpg"
+    },
+    {
+      "name": "Jeremy Renner",
+      "image": "act6.jpg"
+    }
+  ]
+}
